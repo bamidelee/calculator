@@ -173,7 +173,14 @@ clear.addEventListener('click', (e) =>
 min.addEventListener('click', (e) =>
 {
     y = `-${y}`;
+    if (x)
+    {
     input.textContent += y;
+    }
+    else{
+        input.textContent = y; 
+    }
+
     min.style.visibility = 'hidden';
 })
 //the equals to button
@@ -181,7 +188,8 @@ eval.addEventListener('click', (e) =>
 {
     y = r;
     r = '';
-    result.textContent = r;
+    x = '';
+    result.textContent = '';
     input.textContent = y;
 })
 //the back space button
